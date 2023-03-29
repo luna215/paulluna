@@ -1,12 +1,12 @@
-@import 'fontsource-ibm-plex-sans/latin-400.css';
-@import 'fontsource-ibm-plex-sans/latin-700.css';
+/* @import 'fontsource-ibm-plex-sans/latin-400.css';
+@import 'fontsource-ibm-plex-sans/latin-700.css'; */
 
 :root {
   --font-family: 'IBM Plex Sans', sans-serif;
   --dark-color: #212121;
   --light-color: #fafafa;
-  --dark-theme-accent-color: #1beb9e;
-  --light-theme-accent-color: #0ea46d;
+  --dark-theme-accent-color: #F47174;
+  --light-theme-accent-color: #F47174;
   /*https://codepen.io/sosuke/pen/Pjoqqp*/
   --light-theme-svg-filter: invert(42%) sepia(61%) saturate(3688%)
     hue-rotate(137deg) brightness(96%) contrast(101%);

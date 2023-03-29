@@ -1,3 +1,6 @@
+const name = "Paul Luna"
+const description = "Senior Software Engineer"
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -7,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'personal-website',
+    title: `${name} | ${description}`,
     htmlAttrs: {
       lang: 'en'
     },
@@ -15,7 +18,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'apple-mobile-web-app-title',
+        content: name,
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -24,6 +31,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'bootstrap/dist/css/bootstrap-reboot.css',
+    '@/assets/styles/global.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
