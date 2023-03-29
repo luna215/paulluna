@@ -7,7 +7,9 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  router: {
+    base: '/personal-website/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: `${name} | ${description}`,
@@ -56,5 +58,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    analyze: true,
   }
 }
