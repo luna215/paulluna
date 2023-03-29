@@ -1,0 +1,105 @@
+:root {
+  --font-family: 'IBM Plex Sans', sans-serif;
+  --dark-color: #212121;
+  --light-color: #fafafa;
+  --dark-theme-accent-color: #F47174;
+  --light-theme-accent-color: #F47174;
+  /*https://codepen.io/sosuke/pen/Pjoqqp*/
+  --light-theme-svg-filter: invert(42%) sepia(61%) saturate(3688%)
+    hue-rotate(137deg) brightness(96%) contrast(101%);
+  --dark-theme-svg-filter: invert(77%) sepia(77%) saturate(519%)
+    hue-rotate(89deg) brightness(99%) contrast(87%);
+  --light-theme-hover-svg-filter: invert(96%) sepia(51%) saturate(5539%)
+    hue-rotate(183deg) brightness(127%) contrast(96%);
+  --dark-theme-hover-svg-filter: invert(19%) sepia(0%) saturate(1104%)
+    hue-rotate(153deg) brightness(104%) contrast(123%);
+}
+
+body {
+  --text-color: var(--dark-color);
+  --background-color: var(--light-color);
+  --accent-color: var(--light-theme-accent-color);
+  --svg-filter: var(--light-theme-svg-filter);
+  --svg-hover-filter: var(--light-theme-hover-svg-filter);
+}
+
+body.dark {
+  --text-color: var(--light-color);
+  --background-color: var(--dark-color);
+  --accent-color: var(--dark-theme-accent-color);
+  --svg-filter: var(--dark-theme-svg-filter);
+  --svg-hover-filter: var(--dark-theme-hover-svg-filter);
+}
+
+* {
+  font-family: var(--font-family) !important;
+  word-break: break-word;
+  transition: none !important;
+  animation: none !important;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-width: 75ch;
+  margin: 1rem auto;
+}
+
+section {
+  padding: 1rem;
+  margin: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.smaller {
+  font-size: 0.75rem;
+}
+
+html,
+body,
+p {
+  font-size: clamp(20px, calc(1vw + 1vh), calc(1vw + 1vh));
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+img {
+  filter: var(--svg-filter);
+}
+a:hover,
+a:focus,
+a:active {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+
+.images-container a:hover,
+.images-container a:focus,
+.images-container a:active {
+  background-color: var(--accent-color);
+}
+
+.images-container a:hover img,
+.images-container a:focus img,
+.images-container a:active img {
+  filter: var(--svg-hover-filter);
+}
